@@ -19,6 +19,7 @@ RUN mkdir -p /var/lock/apache2; chown www-data /var/lock/apache2
 RUN mkdir -p /var/webdav; chown www-data /var/webdav
 
 ADD apache2.conf /etc/apache2/apache2.conf
+ADD ports.conf   /etc/apache2/ports.conf
 ADD webdav.conf /etc/apache2/sites-available/webdav.conf
 RUN a2ensite webdav
 
